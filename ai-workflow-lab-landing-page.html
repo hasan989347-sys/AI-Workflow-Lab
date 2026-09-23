@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Workflow Lab | AI Tools, Automation & Smarter Workflows</title>
+  <meta name="description" content="Discover practical AI tools, no-code automation workflows, tutorials and resources designed to simplify repetitive online-business tasks.">
+  <meta property="og:title" content="AI Workflow Lab">
+  <meta property="og:description" content="AI Tools • Automation • Smarter Workflows">
+  <meta property="og:type" content="website">
+  <style>
+    :root{--navy:#0b1220;--blue:#2563eb;--blue2:#3b82f6;--bg:#f8fafc;--text:#111827;--muted:#64748b;--card:#fff;--border:#e2e8f0}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(248,250,252,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-weight:800;font-size:20px;color:var(--navy)}.logo span{color:var(--blue)}
+    nav{display:flex;gap:24px;align-items:center;font-size:14px;color:#475569}nav a:hover{color:var(--blue)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:12px;font-weight:700;font-size:14px;transition:.2s;border:1px solid transparent;cursor:pointer}
+    .btn-primary{background:var(--blue);color:white;box-shadow:0 8px 24px rgba(37,99,235,.2)}.btn-primary:hover{transform:translateY(-2px);background:#1d4ed8}
+    .btn-secondary{background:white;border-color:var(--border);color:var(--navy)}.btn-secondary:hover{border-color:#93c5fd}
+    .hero{padding:90px 0 80px;background:radial-gradient(circle at 80% 20%,#dbeafe 0,transparent 34%),linear-gradient(180deg,#fff,var(--bg))}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}.badge{display:inline-block;background:#dbeafe;color:#1d4ed8;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.04em}
+    h1{font-size:clamp(42px,6vw,70px);line-height:1.02;margin:18px 0}.hero p{font-size:19px;color:var(--muted);max-width:650px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}.micro{font-size:13px!important;color:#94a3b8!important}
+    .visual{min-height:360px;border-radius:28px;background:linear-gradient(145deg,#0b1220,#172554);padding:28px;position:relative;overflow:hidden;box-shadow:0 25px 70px rgba(15,23,42,.18)}
+    .orb{position:absolute;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,#60a5fa,transparent 65%);right:-40px;top:-50px;opacity:.7}
+    .flow-card{position:relative;margin:22px 0;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:18px;color:white}
+    .flow-card strong{display:block;margin-bottom:5px}.flow-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.node{padding:9px 12px;border-radius:10px;background:rgba(255,255,255,.1);font-size:13px}.arrow{color:#93c5fd}
+    section{padding:78px 0}.section-head{text-align:center;max-width:720px;margin:0 auto 40px}.section-head h2{font-size:38px;line-height:1.15;margin:0 0 12px}.section-head p{color:var(--muted)}
+    .problem{background:white}.problem-box{max-width:820px;margin:auto;padding:35px;border:1px solid var(--border);border-radius:22px;background:#fff;box-shadow:0 12px 35px rgba(15,23,42,.06)}
+    .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:24px;box-shadow:0 8px 25px rgba(15,23,42,.04)}.icon{font-size:28px}.card h3{margin:12px 0 7px}.card p{color:var(--muted);font-size:14px}
+    .featured{background:#0b1220;color:white}.featured-box{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.featured p{color:#cbd5e1}.featured .card{background:#111c33;border-color:#263653;color:white}.check{margin:10px 0;color:#dbeafe}
+    .audience{background:white}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.step-num{font-size:42px;font-weight:900;color:#bfdbfe}.trust{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}.pill{padding:10px 14px;border:1px solid var(--border);border-radius:999px;background:white;font-weight:700;font-size:13px}
+    .cta{padding:90px 0;background:linear-gradient(135deg,#eff6ff,#fff)}.cta-box{text-align:center}.cta-box h2{font-size:42px;margin:0 0 12px}.cta-box p{color:var(--muted);margin-bottom:25px}
+    footer{background:#0b1220;color:#cbd5e1;padding:45px 0}.footer-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.footer-logo{color:white;font-weight:800}.footer-links{display:flex;gap:18px;flex-wrap:wrap;font-size:13px}.footer-links a:hover{color:white}.disclosure{font-size:12px;color:#94a3b8;max-width:760px;margin-top:25px}
+    @media(max-width:900px){nav{display:none}.hero-grid,.featured-box{grid-template-columns:1fr}.grid4{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.hero{padding:65px 0}.grid4,.steps{grid-template-columns:1fr}.section-head h2{font-size:31px}h1{font-size:48px}.visual{min-height:300px}.btn{width:100%}.actions{display:grid}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">AI <span>Workflow Lab</span></a>
+    <nav>
+      <a href="#tools">AI Tools</a>
+      <a href="#automation">Automation</a>
+      <a href="#tutorials">Tutorials</a>
+      <a href="#resources">Resources</a>
+    </nav>
+    <a class="btn btn-primary" href="#resources">Explore AI Tools</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">AI TOOLS • AUTOMATION • ONLINE BUSINESS</span>
+        <h1>Work Smarter With AI</h1>
+        <p>Discover practical AI tools, no-code automation workflows, and smarter systems designed to simplify repetitive online-business tasks.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#tools">Explore AI Tools</a>
+          <a class="btn btn-secondary" href="#automation">Learn AI Automation</a>
+        </div>
+        <p class="micro">Practical guides. Useful tools. Smarter workflows.</p>
+      </div>
+      <div class="visual" aria-label="AI workflow illustration">
+        <div class="orb"></div>
+        <div class="flow-card">
+          <strong>AI Workflow</strong>
+          <div class="flow-row">
+            <span class="node">Trigger</span><span class="arrow">→</span>
+            <span class="node">AI Task</span><span class="arrow">→</span>
+            <span class="node">Review</span><span class="arrow">→</span>
+            <span class="node">Output</span>
+          </div>
+        </div>
+        <div class="flow-card">
+          <strong>Smart Systems</strong>
+          <div class="flow-row">
+            <span class="node">Research</span><span class="arrow">+</span>
+            <span class="node">Content</span><span class="arrow">+</span>
+            <span class="node">Automation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="problem">
+    <div class="container">
+      <div class="section-head">
+        <h2>Still Doing Everything Manually?</h2>
+        <p>AI can do more than simply generate an answer. The opportunity is building repeatable workflows around tasks you do again and again.</p>
+      </div>
+      <div class="problem-box">
+        <p><strong>Before:</strong> Prompt → Copy → Edit → Repeat</p>
+        <p><strong>After:</strong> Trigger → AI Workflow → Review → Output</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tools">
+    <div class="container">
+      <div class="section-head">
+        <h2>Explore The AI Workflow Ecosystem</h2>
+        <p>Practical resources for people learning how AI can fit into real digital workflows.</p>
+      </div>
+      <div class="grid4">
+        <article class="card"><div class="icon">🤖</div><h3>AI Tools</h3><p>Discover useful AI tools for content creation, research, marketing, productivity and online business.</p></article>
+        <article class="card" id="automation"><div class="icon">⚙️</div><h3>Automation</h3><p>Learn how repetitive tasks can be organized into practical no-code workflows.</p></article>
+        <article class="card" id="tutorials"><div class="icon">📈</div><h3>Online Business</h3><p>Explore tools and systems that can help streamline everyday digital-business activities.</p></article>
+        <article class="card"><div class="icon">🧠</div><h3>AI Tutorials</h3><p>Simple explanations and practical examples without unnecessary technical complexity.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured" id="resources">
+    <div class="container featured-box">
+      <div>
+        <span class="badge">FEATURED AI RESOURCE</span>
+        <h2>AI Agent Empire</h2>
+        <h3>Move beyond one prompt at a time.</h3>
+        <p>AI Agent Empire introduces a no-code approach to building repeatable AI-agent workflows for online-business tasks.</p>
+        <a class="btn btn-primary" href="YOUR_WARRIORPLUS_AFFILIATE_LINK" target="_blank" rel="nofollow sponsored noopener">Explore AI Agent Empire →</a>
+      </div>
+      <div class="card">
+        <div class="check">✓ No-code approach</div>
+        <div class="check">✓ AI-agent workflow concepts</div>
+        <div class="check">✓ Repeatable business processes</div>
+        <div class="check">✓ Practical automation structure</div>
+        <div class="check">✓ Designed for marketers and creators</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="audience">
+    <div class="container">
+      <div class="section-head">
+        <h2>Built For People Who Want To Work Smarter</h2>
+      </div>
+      <div class="grid4">
+        <article class="card"><div class="icon">📣</div><h3>Digital Marketers</h3><p>Simplify repetitive marketing tasks.</p></article>
+        <article class="card"><div class="icon">🎥</div><h3>Content Creators</h3><p>Build more organized content workflows.</p></article>
+        <article class="card"><div class="icon">🚀</div><h3>Online Entrepreneurs</h3><p>Explore AI-powered business systems.</p></article>
+        <article class="card"><div class="icon">🌱</div><h3>AI Beginners</h3><p>Understand AI automation without starting with complicated code.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <h2>Start Your AI Workflow Journey</h2>
+      </div>
+      <div class="steps">
+        <article class="card"><div class="step-num">01</div><h3>Discover</h3><p>Find AI tools and workflows relevant to your goals.</p></article>
+        <article class="card"><div class="step-num">02</div><h3>Learn</h3><p>Follow practical tutorials and understand how the systems work.</p></article>
+        <article class="card"><div class="step-num">03</div><h3>Apply</h3><p>Turn useful ideas into repeatable workflows for your own projects.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <h2>Less Hype. More Practical AI.</h2>
+        <p>There are thousands of AI tools available today. The challenge is understanding which tools are useful, how they work, and where they fit into a real workflow.</p>
+      </div>
+      <div class="trust">
+        <span class="pill">✓ Practical</span>
+        <span class="pill">✓ Beginner Friendly</span>
+        <span class="pill">✓ Workflow Focused</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container cta-box">
+      <h2>Ready To Work Smarter With AI?</h2>
+      <p>Explore practical AI tools, automation ideas and workflow resources.</p>
+      <a class="btn btn-primary" href="#resources">Explore AI Workflows →</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-logo">AI Workflow Lab</div><div>AI Tools • Automation • Smarter Workflows</div></div>
+      <div class="footer-links">
+        <a href="#">About</a><a href="#">Contact</a><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a><a href="#">Affiliate Disclosure</a>
+      </div>
+    </div>
+    <p class="disclosure"><strong>Affiliate Disclosure:</strong> Some links on this website may be affiliate links. If you purchase a product or service through a qualifying link, we may receive a commission at no additional cost to you.</p>
+  </div>
+</footer>
+
+</body>
+</html>
